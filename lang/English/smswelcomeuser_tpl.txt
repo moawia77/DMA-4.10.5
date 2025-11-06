@@ -1,0 +1,7 @@
+Welcome to our system! Your account name is {USERNAME}, password is {PASSWORD}
+
+
+Available tags:
+USERNAME - user name
+PASSWORD - password
+SRVNAME - service plan name

@@ -1,0 +1,9 @@
+Dear {NAME}! Your balance is {BALANCE} {CURRENCY}
+
+Available tags:
+NAME - first name + last name or user name
+USERNAME - user name
+FIRSTNAME - first name
+LASTNAME - last name
+BALANCE - current deposit
+CURRENCY - system currency

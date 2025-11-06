@@ -1,0 +1,10 @@
+Dear {NAME}! Your account expires on {EXPIRY}. You have {DAYS} day(s) to renew your account.
+
+Available tags:
+NAME - first name + last name or user name
+USERNAME - user name
+FIRSTNAME - first name
+LASTNAME - last name
+EXPIRY - expiry date
+DAYS - remaining days
+ADDRESS - address
