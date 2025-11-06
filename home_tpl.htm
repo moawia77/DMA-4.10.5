@@ -1,0 +1,73 @@
+<link href="styles.css" rel="stylesheet" type="text/css"> 
+ 
+<div align="left"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><table border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td><table border="0" cellpadding="0" cellspacing="1" class="tb-bdr" >
+                <tr> 
+                  <td><table width="100%" border="0" cellpadding="2" cellspacing="0" class="tb-bg">
+                      <tr> 
+                        <td class="modtext">{HOME0}</td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td><img src="images/spacer.gif" width="1" height="2"></td>
+          </tr>
+        </table></td>
+      <td>
+          <table border="0" align="right" cellpadding="2" cellspacing="2">
+          <tr>
+            <td nowrap class="normal"><div align="right"> {HOME6}: </div></td>
+			<form name="form2" method="post" action="admin.php?cont=edit_user">
+              <td class="normal">
+			    <input name="username" type="text" class="normal" id="username" size="32" maxlength="32"> 
+              </td>
+			 </form>
+            <td nowrap class="normal"><div align="right"> {HOME5}:</div></td>
+            <form name="form1" action="admin.php?cont=list_users&source=filter" method="post" onSubmit="setFilter();">
+              <td class="normal"> <input name="listacctype" type="hidden" value="255">
+                <input name="username" type="text" class="normal" id="username" size="32" maxlength="32"> 
+              </td>
+            </form>
+          </tr>
+        </table>
+        </td>
+    </tr>
+  </table>
+</div>
+<table width="80%" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#D3D9E6" class="tb-bdr">
+  <tr> 
+    <td><table width="100%" border="0" cellpadding="5" cellspacing="0" class="tb-bg">
+        <tr> 
+          <td><div align="center"> 
+              <p class="normal">&nbsp;</p>
+              <p class="normal"><img src="images/radmanlogo_small.gif" width="147" height="78" border="0"><br>
+                {HOME4} {VER}</p>
+              <p class="normal"><strong> Copyright &copy; 2004-2025, DMA Softlab<br>
+                </strong>{HOME1}</p>
+              </div>
+            <p align="center" class="normal"><font color="#FF0000"><strong> </strong></font>{HOME2}</p>
+            <p align="center" class="normal"><a href="admin.php?cont=eula"><strong>{HOME3}</strong></a></p>
+            <p align="center" class="title2">&nbsp;</p>
+            <p align="center" id="newversion"></p>
+            <p align="center" class="normal">&nbsp;</p>
+            <p align="center" class="small"><strong><font color="#FF0000">{TRIAL}</font></strong></p>
+            </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script language="JavaScript" type="text/JavaScript">
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "checkversion.php", true);
+xmlHttp.send(null);
+xmlHttp.onload = function (e)
+{
+	document.getElementById("newversion").innerHTML = '<font color="#FF0000">' + xmlHttp.responseText + '</font>';
+}
+</script>
